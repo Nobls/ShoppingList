@@ -1,0 +1,59 @@
+.activeFilter {
+    color: #fff;
+    background: #6A81C1FF;
+    border: none;
+    width: 82px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.buttonFilter {
+    width: 82px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 6px;
+    /*border-color: #f1c40f;*/
+    /*background-color: #dadfed;*/
+    border: none;
+    background-position: 100%;
+    background-size: 400%;
+    transition: background .6s ease-in-out;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.opacityTitle {
+    opacity: 1;
+}
+
+.shopListCard {
+    background: #fff;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 50px;
+    position: relative;
+}
+
+.shopListCardTitleFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopListCardInputFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopListTitle {
+    text-align: center;
+    padding: 20px 0;
+}
