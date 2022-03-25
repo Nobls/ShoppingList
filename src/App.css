@@ -10,9 +10,32 @@
   background: #dadfed;
 }
 
-/*.cardStyle{
-  min-width: 150px;
-  min-height: 200px;
-  border: 2px solid lightgrey;
-  border-radius: 10px;
-}*/
+.toolBar{
+  background-color: #6A81C1FF;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.inputWrapper{
+  margin-left: 28px;
+}
+
+@media screen and (max-width: 475px){
+  .toolBar{
+    flex-direction: column;
+    padding: 15px 0;
+    align-items: flex-start;
+  }
+  .toolBar h6{
+    margin-bottom: 15px;
+  }
+
+  .inputWrapper{
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 375px){
+
+}
+

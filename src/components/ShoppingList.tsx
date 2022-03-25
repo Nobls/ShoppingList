@@ -2,7 +2,8 @@ import React, {ChangeEvent, KeyboardEvent, useState} from "react";
 import {filterValueType} from "../App";
 import s from './shoppingList.module.css'
 import {Checkbox, IconButton, TextField} from "@mui/material";
-import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import ClearIcon from '@mui/icons-material/Clear';
+import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 
 export type shopListType = {
@@ -69,7 +70,7 @@ export const ShoppingList = (props: propsType) => {
         <div className={s.shopListCard}>
             <div className={s.shopListCardTitleFlex}>
                 <h3 className={s.shopListTitle}>{props.nameList}</h3>
-                <RemoveCircleIcon onClick={removeShoppingListHandler}/>
+                <ClearIcon sx={{color:'red'}} onClick={removeShoppingListHandler} />
             </div>
 
             <div className={s.shopListCardInputFlex}>
@@ -85,21 +86,23 @@ export const ShoppingList = (props: propsType) => {
                     size={'small'}
                 />
                 <IconButton style={{padding: '0',}} aria-label="delete" onClick={addProductHandler}>
-                    <AddIcon/>
+                    <AddIcon sx={{color:'green'}}/>
                 </IconButton>
             </div>
             <ul>
                 {
                     props.shopList.map(m => {
                         return (
-                            <li key={m.id}>
+                            <li key={m.id} className={s.shopListItem}>
                                 <Checkbox
                                     onChange={(event) => onChangeCheckboxHandler(event, m.id)}
                                     checked={m.isDone}
-                                    defaultChecked color="success"
+                                    defaultChecked
+                                    sx={{color:'#6A81C1FF'}}
                                 />
                                 <span className={m.isDone ? s.opacityTitle : ''}>{m.title}</span>
-                                <button onClick={() => removeProductHandler(m.id)}>x</button>
+
+                                <DeleteIcon onClick={() => removeProductHandler(m.id)} sx={{color:'#6A81C1FF'}}/>
                             </li>
                         )
                     })}

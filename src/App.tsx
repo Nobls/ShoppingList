@@ -62,16 +62,14 @@ function App() {
         <div className="App">
 
             <AppBar position="static">
-                <Toolbar style={{
-                    backgroundColor: '#6A81C1FF',
-                    flexDirection: "row-reverse",
-                    justifyContent: 'space-between'
-                }}>
+                <Toolbar
+                    className={'toolBar'}
+                >
                     <Typography variant="h6" style={{display: 'flex', alignItems: 'center'}}>
                         Shopping List
                         <ShoppingBasketIcon style={{marginLeft: '10px'}}/>
                     </Typography>
-                    <div style={{marginLeft: '28px'}}>
+                    <div className={'inputWrapper'}>
                         <input style={{
                             height: '30px',
                             borderRadius: '5px',
